@@ -32,34 +32,68 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 30px;
       margin-top: 30px;
     }
 
-    .galeria img {
-      max-width: 250px;
-      height: auto;
+    .obra {
+      max-width: 280px;
+      background-color: #fff;
+      padding: 15px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .whatsapp {
-      margin-top: 30px;
+    .obra img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .descricao {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    .preco {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #006400;
     }
 
     .whatsapp a {
       background-color: #25d366;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 15px;
       border-radius: 5px;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 0.9em;
+      display: inline-block;
+      margin-top: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: background 0.3s;
     }
 
     .whatsapp a:hover {
       background-color: #1ebe5b;
+    }
+
+    .leilao-info {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #444;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      font-size: 0.9em;
     }
 
     audio {
@@ -72,33 +106,67 @@
   <h1>Galeria IPAVC</h1>
 
   <div class="galeria">
-    <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Raízes do Saber]" target="_blank">
-  Fazer Lance via WhatsApp
-    </a>
-    <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Silêncio que Ensina]" target="_blank">
-  Fazer Lance via WhatsApp
-</a>
-    <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousa">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Cores da Lousa]" target="_blank">
-  Fazer Lance via WhatsApp
-</a>
-    <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Tradução que Ensina]" target="_blank">
-  Fazer Lance via WhatsApp
-</a>
-    <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Caminho de Giz]" target="_blank">
-  Fazer Lance via WhatsApp
-</a>
+    <div class="obra">
+      <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
+      <div class="descricao">Representa o conhecimento tradicional que sustenta a educação nas comunidades africanas.</div>
+      <div class="preco">Preço base: 50.000 KZ</div>
+      <div class="whatsapp">
+        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Raízes do Saber">Fazer Lance via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="obra">
+      <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
+      <div class="descricao">Escultura em madeira que representa a sabedoria que vem da escuta e contemplação.</div>
+      <div class="preco">Preço base: 60.000 KZ</div>
+      <div class="whatsapp">
+        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Silêncio que Ensina">Fazer Lance via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="obra">
+      <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousa">
+      <div class="descricao">Expressão artística das vivências escolares e a diversidade nas salas de aula angolanas.</div>
+      <div class="preco">Preço base: 45.000 KZ</div>
+      <div class="whatsapp">
+        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Cores da Lousa">Fazer Lance via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="obra">
+      <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
+      <div class="descricao">Obra que valoriza a transmissão do saber por meio da oralidade e da cultura ancestral.</div>
+      <div class="preco">Preço base: 55.000 KZ</div>
+      <div class="whatsapp">
+        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Tradição que Ensina">Fazer Lance via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="obra">
+      <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
+      <div class="descricao">Simboliza o percurso dos educadores em meio aos desafios e descobertas do ensino.</div>
+      <div class="preco">Preço base: 40.000 KZ</div>
+      <div class="whatsapp">
+        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Caminhos de Giz">Fazer Lance via WhatsApp</a>
+      </div>
+    </div>
   </div>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/244943589007?text=Olá%2C+tenho+interesse+em+fazer+um+lance+na+obra+da+Galeria+IPAVC" target="_blank">
-      Fazer um lance via WhatsApp
-    </a>
+  <div class="leilao-info">
+    <h2>Leilão Solidário</h2>
+    <p>Esta galeria faz parte do <strong>Leilão Solidário da Conferência Internacional de Pedagogia</strong>, que ocorrerá de <strong>12 a 14 de Maio</strong>.</p>
+    <p><strong>Objetos do leilão:</strong> obras de arte originais criadas por artistas educadores do Instituto IPAVC.</p>
+    <p><strong>Compradores terão direito a:</strong></p>
+    <ul>
+      <li>Certificado digital de aquisição da obra</li>
+      <li>Nome publicado na galeria de honra solidária do evento</li>
+      <li>Possibilidade de expor em futuras mostras itinerantes do IPAVC</li>
+    </ul>
   </div>
+
+  <footer>
+    Instituto Politécnico de Artes Valter Cambodja – Todos os direitos reservados
+  </footer>
 
   <audio autoplay loop>
     <source src="imagens/fundo-suave.mp3" type="audio/mpeg">
