@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria IPAVC</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Galeria Digital IPAVC</h1>
-    <p>Obras originais dos professores e alunos do Instituto Politécnico de Artes Valter Cambodja</p>
+    <h1 id="titulo">Galeria IPAVC</h1>
+    <p>Obras autênticas criadas por professores e alunos do Instituto Politécnico de Artes Valter Cambodja.</p>
   </header>
 
-  <section class="galeria">
+  <main class="galeria">
     <div class="obra">
       <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
       <h2>Raízes do Saber</h2>
-      <p>Obra exclusiva. Técnica mista. Leilão em formato especial.</p>
+      <p>Obra símbolo da sabedoria ancestral. Técnica mista.</p>
+      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Raízes%20do%20Saber%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
     </div>
 
     <div class="obra">
       <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
       <h2>Silêncio que Ensina</h2>
-      <p>Reflexão artística sobre o poder do silêncio pedagógico.</p>
+      <p>O poder do silêncio na construção do saber.</p>
+      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Silêncio%20que%20Ensina%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
     </div>
 
     <div class="obra">
       <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousã">
       <h2>Cores da Lousã</h2>
-      <p>Representação abstrata da sala de aula africana.</p>
+      <p>As cores que moldam a mente e o mundo.</p>
+      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Cores%20da%20Lousã%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
     </div>
 
     <div class="obra">
       <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
       <h2>Tradição que Ensina</h2>
-      <p>Fusão entre o saber tradicional e o ensino moderno.</p>
+      <p>Encontro entre herança cultural e educação.</p>
+      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Tradição%20que%20Ensina%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
     </div>
 
     <div class="obra">
       <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
       <h2>Caminhos de Giz</h2>
-      <p>Trilhas do educador, simbolizadas pelo giz.</p>
+      <p>Representação poética do percurso educativo.</p>
+      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Caminhos%20de%20Giz%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
     </div>
-  </section>
+  </main>
 
   <footer>
-    <p>Assinatura: IPAVC | Conferência Internacional de Pedagogia – Bié, 2025</p>
+    <p>Instituto Politécnico de Artes Valter Cambodja - IPAVC</p>
   </footer>
+
+  <script>
+    // Animação de cores explosivas no título
+    const titulo = document.getElementById("titulo");
+    const cores = ["#ff0000", "#00cc66", "#3399ff", "#ffcc00", "#9933ff", "#ff66cc"];
+
+    function mudarCores() {
+      const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+      titulo.style.color = corAleatoria;
+      titulo.style.transition = "color 0.5s ease-in-out";
+    }
+
+    setInterval(mudarCores, 5000);
+  </script>
 </body>
 </html>
