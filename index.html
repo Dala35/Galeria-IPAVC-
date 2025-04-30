@@ -19,14 +19,17 @@
       animation: coresExplosivas 5s infinite;
     }
 
-    @keyframes coresExplosivas {
-      0% { color: #ff0000; }
-      20% { color: #ffa500; }
-      40% { color: #008000; }
-      60% { color: #0000ff; }
-      80% { color: #4b0082; }
-      100% { color: #ff69b4; }
-    }
+   @keyframes mudarCor {
+  0% { color: red; }
+  25% { color: blue; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: red; }
+}
+
+h1 {
+  animation: mudarCor 5s infinite;
+} 
 
     .galeria {
       display: flex;
