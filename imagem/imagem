@@ -1,0 +1,10 @@
+galeria-ipavc/
+│
+├── index.html
+├── style.css
+├── /img/
+│   ├── raizes-do-saber.jpg
+│   ├── silencio-que-ensina.jpg
+│   ├── cores-da-lousa.jpg
+│   ├── tradicao-que-ensina.jpg
+│   └── caminhos-de-giz.jpg
