@@ -19,17 +19,14 @@
       animation: coresExplosivas 5s infinite;
     }
 
-   @keyframes mudarCor {
-  0% { color: red; }
-  25% { color: blue; }
-  50% { color: green; }
-  75% { color: orange; }
-  100% { color: red; }
-}
-
-h1 {
-  animation: mudarCor 5s infinite;
-} 
+    @keyframes coresExplosivas {
+      0% { color: #ff0000; }
+      20% { color: #ffa500; }
+      40% { color: #008000; }
+      60% { color: #0000ff; }
+      80% { color: #4b0082; }
+      100% { color: #ff69b4; }
+    }
 
     .galeria {
       display: flex;
@@ -64,35 +61,35 @@ h1 {
     .whatsapp a:hover {
       background-color: #1ebe5b;
     }
+
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-  <source src="caminho/para/seu/audio.mp3" type="audio/mpeg">
-  Seu navegador não suporta áudio embutido.
-  </audio>
 
   <h1>Galeria IPAVC</h1>
 
   <div class="galeria">
     <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Nome%20da%20Obra]" target="_blank">
+    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Raízes do Saber]" target="_blank">
   Fazer Lance via WhatsApp
     </a>
     <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Nome%20da%20Obra]" target="_blank">
+    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Silêncio que Ensina]" target="_blank">
   Fazer Lance via WhatsApp
 </a>
-    <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousã">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Nome%20da%20Obra]" target="_blank">
+    <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousa">
+    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Cores da Lousa]" target="_blank">
   Fazer Lance via WhatsApp
 </a>
     <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Nome%20da%20Obra]" target="_blank">
+    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Tradução que Ensina]" target="_blank">
   Fazer Lance via WhatsApp
 </a>
     <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
-    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Nome%20da%20Obra]" target="_blank">
+    <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Caminho de Giz]" target="_blank">
   Fazer Lance via WhatsApp
 </a>
   </div>
@@ -102,6 +99,11 @@ h1 {
       Fazer um lance via WhatsApp
     </a>
   </div>
+
+  <audio autoplay loop>
+    <source src="imagens/fundo-suave.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio embutido.
+  </audio>
 
 </body>
 </html>
