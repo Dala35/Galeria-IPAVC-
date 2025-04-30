@@ -4,67 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria IPAVC</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1 id="titulo">Galeria IPAVC</h1>
-    <p>Obras autênticas criadas por professores e alunos do Instituto Politécnico de Artes Valter Cambodja.</p>
-  </header>
-
-  <main class="galeria">
-    <div class="obra">
-      <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
-      <h2>Raízes do Saber</h2>
-      <p>Obra símbolo da sabedoria ancestral. Técnica mista.</p>
-      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Raízes%20do%20Saber%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
-      <h2>Silêncio que Ensina</h2>
-      <p>O poder do silêncio na construção do saber.</p>
-      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Silêncio%20que%20Ensina%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousã">
-      <h2>Cores da Lousã</h2>
-      <p>As cores que moldam a mente e o mundo.</p>
-      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Cores%20da%20Lousã%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
-      <h2>Tradição que Ensina</h2>
-      <p>Encontro entre herança cultural e educação.</p>
-      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Tradição%20que%20Ensina%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
-      <h2>Caminhos de Giz</h2>
-      <p>Representação poética do percurso educativo.</p>
-      <a class="whatsapp-button" href="https://wa.me/244923123456?text=Tenho%20interesse%20na%20obra%20Caminhos%20de%20Giz%20da%20Galeria%20IPAVC." target="_blank">Fazer Lance via WhatsApp</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>Instituto Politécnico de Artes Valter Cambodja - IPAVC</p>
-  </footer>
-
-  <script>
-    // Animação de cores explosivas no título
-    const titulo = document.getElementById("titulo");
-    const cores = ["#ff0000", "#00cc66", "#3399ff", "#ffcc00", "#9933ff", "#ff66cc"];
-
-    function mudarCores() {
-      const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
-      titulo.style.color = corAleatoria;
-      titulo.style.transition = "color 0.5s ease-in-out";
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
     }
 
-    setInterval(mudarCores, 5000);
-  </script>
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      animation: coresExplosivas 5s infinite;
+    }
+
+    @keyframes coresExplosivas {
+      0% { color: #ff0000; }
+      20% { color: #ffa500; }
+      40% { color: #008000; }
+      60% { color: #0000ff; }
+      80% { color: #4b0082; }
+      100% { color: #ff69b4; }
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .galeria img {
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp {
+      margin-top: 30px;
+    }
+
+    .whatsapp a {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .whatsapp a:hover {
+      background-color: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galeria IPAVC</h1>
+
+  <div class="galeria">
+    <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
+    <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
+    <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousã">
+    <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
+    <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
+  </div>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/244943589007?text=Olá%2C+tenho+interesse+em+fazer+um+lance+na+obra+da+Galeria+IPAVC" target="_blank">
+      Fazer um lance via WhatsApp
+    </a>
+  </div>
+
 </body>
 </html>
