@@ -1,273 +1,156 @@
-
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria IPAVC</title>
   <style>
-    body {
-      background-color: #f8f8f8;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2em;
-      font-weight: bold;
-      animation: coresExplosivas 5s infinite;
-    }
-
-    @keyframes coresExplosivas {
-      0% { color: #ff0000; }
-      20% { color: #ffa500; }
-      40% { color: #008000; }
-      60% { color: #0000ff; }
-      80% { color: #4b0082; }
-      100% { color: #ff69b4; }
-    }
-
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .obra {
-      max-width: 260px;
-    }
-
-    .obra img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .descricao {
-      margin-top: 10px;
-      font-size: 0.95em;
-      color: #333;
-    }
-
-    .preco {
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .whatsapp a {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.9em;
-      transition: background 0.3s;
-    }
-
-    .whatsapp a:hover {
-      background-color: #1ebe5b;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    audio {
-      display: none;
-    }
-
-    .leilao-info {
-      margin-top: 40px;
-      text-align: left;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #444;
-      font-size: 1em;
-    }
-
-    .leilao-info h2 {
-      color: #b22222;
-    }
-
-    .leilao-info ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Galeria IPAVC</h1>
-
-  <div class="galeria">
-    <div class="obra">
-      <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
-      <div class="descricao">Obra inspirada nas tradições do saber ancestral.</div>
-      <div class="preco">Preço base: 50.000 KZ</div>
-      <div class="whatsapp">
-        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Raízes%20do%20Saber" target="_blank">Fazer Lance via WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
-      <div class="descricao">Reflexão visual sobre o poder do silêncio na aprendizagem.</div>
-      <div class="preco">Preço base: 60.000 KZ</div>
-      <div class="whatsapp">
-        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Silêncio%20que%20Ensina" target="_blank">Fazer Lance via WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousa">
-      <div class="descricao">Uma homenagem aos educadores que pintam o saber no quadro da vida.</div>
-      <div class="preco">Preço base: 45.000 KZ</div>
-      <div class="whatsapp">
-        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Cores%20da%20Lousa" target="_blank">Fazer Lance via WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
-      <div class="descricao">Representação visual da oralidade e partilha intergeracional.</div>
-      <div class="preco">Preço base: 65.000 KZ</div>
-      <div class="whatsapp">
-        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Tradição%20que%20Ensina" target="_blank">Fazer Lance via WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="obra">
-      <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
-      <div class="descricao">Linhas de giz que traçam os sonhos de milhares de jovens.</div>
-      <div class="preco">Preço base: 55.000 KZ</div>
-      <div class="whatsapp">
-        <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20Caminhos%20de%20Giz" target="_blank">Fazer Lance via WhatsApp</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="leilao-info">
-    <h2>Leilão Solidário — Conferência Internacional de Pedagogia</h2>
-    <p><strong>Data:</strong> 12 a 14 de Maio de 2025</p>
-    <p>O valor arrecadado será destinado a projetos educacionais e de arte comunitária.</p>
-
-    <h3>Objetivos do Leilão:</h3>
-    <ul>
-      <li>Valorizar a arte angolana e os artistas locais</li>
-      <li>Reforçar a educação através da arte</li>
-      <li>Apoiar programas de formação no Instituto Politécnico de Artes Valter Cambodja</li>
-    </ul>
-
-    <h3>O que os compradores recebem:</h3>
-    <ul>
-      <li>Certificado de autenticidade IPAVC</li>
-      <li>Reconhecimento oficial durante a conferência</li>
-      <li>Entrega da obra original após o evento</li>
-    </ul>
-  </div>
-
-  <footer>
-    Instituto Politécnico de Artes Valter Cambodja – 2025
-  </footer>
-
-  <audio autoplay loop>
-    <source src="imagens/fundo-suave.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio embutido.
-  </audio>
-
-</body>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria IPAVC</title>
-  <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
+    body {
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
     }
 
-    .fundo-animado {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .fundo-animado .animacao {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .fundo-animado .visivel {
-      opacity: 1;
-    }
-
-    .conteudo {
-      position: relative;
-      z-index: 1;
-      color: white;
+    header {
+      background: #A11212;
+      color: #fff;
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 0.2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .galeria-container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .grid-galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-galeria img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #A11212;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 80px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #f1f1f1;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .close {
+        font-size: 30px;
+        right: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Fundo Animado -->
-  <div class="fundo-animado">
-    <div class="animacao visivel" style="background-image: url('imagens/serpente-tinta.gif');"></div>
-    <div class="animacao" style="background-image: url('imagens/ave-voando.gif');"></div>
-    <div class="animacao" style="background-image: url('imagens/ondas-mar.gif');"></div>
-    <div class="animacao" style="background-image: url('imagens/aurora-boreal.gif');"></div>
-    <div class="animacao" style="background-image: url('imagens/estrela.gif');"></div>
+<header>
+  <h1>Galeria IPAVC</h1>
+  <p>Imagens das nossas atividades culturais e educacionais</p>
+</header>
+
+<section class="galeria-container">
+  <div class="grid-galeria">
+    <img src="img1.jpg" alt="Foto 1" onclick="abrirModal(this.src)">
+    <img src="img2.jpg" alt="Foto 2" onclick="abrirModal(this.src)">
+    <img src="img3.jpg" alt="Foto 3" onclick="abrirModal(this.src)">
+    <img src="img4.jpg" alt="Foto 4" onclick="abrirModal(this.src)">
+    <img src="img5.jpg" alt="Foto 5" onclick="abrirModal(this.src)">
+    <img src="img6.jpg" alt="Foto 6" onclick="abrirModal(this.src)">
+    <!-- Adicione mais imagens conforme necessário -->
   </div>
+</section>
 
-  <!-- Conteúdo principal -->
-  <div class="conteudo">
-    <h1>Galeria Artística IPAVC</h1>
-    <p>Explore a beleza da arte, natureza e movimento.</p>
-  </div>
+<!-- Modal -->
+<div id="modal" class="modal" onclick="fecharModal()">
+  <span class="close" onclick="fecharModal()">&times;</span>
+  <img class="modal-content" id="imagemModal">
+</div>
 
-  <!-- Música de fundo -->
-  <audio autoplay loop>
-    <source src="imagens/fundo-suave.mp3" type="audio/mp3">
-  </audio>
+<footer>
+  <p>&copy; 2025 IPAVC - Instituto Politécnico de Artes Visuais e Cultura</p>
+</footer>
 
-  <!-- Script de troca de fundo -->
-  <script>
-    const fundos = document.querySelectorAll('.fundo-animado .animacao');
-    let atual = 0;
+<script>
+  function abrirModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("imagemModal").src = src;
+  }
 
-    setInterval(() => {
-      fundos[atual].classList.remove('visivel');
-      atual = (atual + 1) % fundos.length;
-      fundos[atual].classList.add('visivel');
-    }, 3000);
-  </script>
+  function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
 
 </body>
 </html>
-   
