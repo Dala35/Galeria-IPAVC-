@@ -5,152 +5,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria IPAVC</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      position: relative;
+      overflow: hidden;
     }
 
-    header {
-      background: #A11212;
-      color: #fff;
-      padding: 1rem 2rem;
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      animation: coresExplosivas 5s infinite;
       text-align: center;
+      z-index: 2;
+      position: relative;
     }
 
-    header h1 {
-      margin-bottom: 0.2rem;
+    @keyframes coresExplosivas {
+      0% { color: #ff0000; }
+      20% { color: #ffa500; }
+      40% { color: #008000; }
+      60% { color: #0000ff; }
+      80% { color: #4b0082; }
+      100% { color: #ff69b4; }
     }
 
-    header p {
-      font-size: 1rem;
-      opacity: 0.9;
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      position: relative;
+      z-index: 2;
     }
 
-    .galeria-container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .galeria img {
+      max-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .grid-galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    .galeria a {
+      text-decoration: none;
+      background-color: #25d366;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 8px;
+      transition: background 0.3s;
+      font-size: 0.9em;
     }
 
-    .grid-galeria img {
-      width: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+    .galeria a:hover {
+      background-color: #1ebe5b;
     }
 
-    .grid-galeria img:hover {
-      transform: scale(1.05);
+    .whatsapp {
+      margin-top: 40px;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+    }
+
+    .whatsapp a {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp a:hover {
+      background-color: #1ebe5b;
     }
 
     footer {
-      background: #A11212;
-      color: #fff;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 40px;
+      z-index: 2;
+      position: relative;
     }
 
-    /* Modal */
-    .modal {
+    audio {
       display: none;
+    }
+
+    /* Efeito de serpente de tinta com SVG animado */
+    .serpente-de-tinta {
       position: fixed;
-      z-index: 999;
-      padding-top: 80px;
-      left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
+      left: 0;
+      width: 200%;
+      height: 200%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.15;
     }
 
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-      border-radius: 10px;
+    @keyframes moverSerpente {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 35px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #f1f1f1;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      .close {
-        font-size: 30px;
-        right: 20px;
-      }
+    .serpente-de-tinta svg {
+      animation: moverSerpente 60s linear infinite;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Galeria IPAVC</h1>
-  <p>Imagens das nossas atividades culturais e educacionais</p>
-</header>
-
-<section class="galeria-container">
-  <div class="grid-galeria">
-    <img src="img1.jpg" alt="Foto 1" onclick="abrirModal(this.src)">
-    <img src="img2.jpg" alt="Foto 2" onclick="abrirModal(this.src)">
-    <img src="img3.jpg" alt="Foto 3" onclick="abrirModal(this.src)">
-    <img src="img4.jpg" alt="Foto 4" onclick="abrirModal(this.src)">
-    <img src="img5.jpg" alt="Foto 5" onclick="abrirModal(this.src)">
-    <img src="img6.jpg" alt="Foto 6" onclick="abrirModal(this.src)">
-    <!-- Adicione mais imagens conforme necessário -->
+  <!-- Fundo com a serpente de tinta -->
+  <div class="serpente-de-tinta">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,400 Q200,300 400,400 T800,400 Q600,500 400,400 T0,400"
+            fill="none" stroke="url(#gradiente)" stroke-width="60" stroke-linecap="round"/>
+      <defs>
+        <linearGradient id="gradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ff0000" />
+          <stop offset="20%" stop-color="#ffa500" />
+          <stop offset="40%" stop-color="#008000" />
+          <stop offset="60%" stop-color="#0000ff" />
+          <stop offset="80%" stop-color="#4b0082" />
+          <stop offset="100%" stop-color="#ff69b4" />
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-</section>
 
-<!-- Modal -->
-<div id="modal" class="modal" onclick="fecharModal()">
-  <span class="close" onclick="fecharModal()">&times;</span>
-  <img class="modal-content" id="imagemModal">
-</div>
+  <h1>Galeria IPAVC</h1>
 
-<footer>
-  <p>&copy; 2025 IPAVC - Instituto Politécnico de Artes Visuais e Cultura</p>
-</footer>
+  <div class="galeria">
+    <div>
+      <img src="imagens/raizes-do-saber.jpg" alt="Raízes do Saber">
+      <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Raízes do Saber]">Fazer Lance via WhatsApp</a>
+    </div>
+    <div>
+      <img src="imagens/silencio-que-ensina.jpg" alt="Silêncio que Ensina">
+      <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Silêncio que Ensina]">Fazer Lance via WhatsApp</a>
+    </div>
+    <div>
+      <img src="imagens/cores-da-lousa.jpg" alt="Cores da Lousa">
+      <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Cores da Lousa]">Fazer Lance via WhatsApp</a>
+    </div>
+    <div>
+      <img src="imagens/tradicao-que-ensina.jpg" alt="Tradição que Ensina">
+      <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Tradição que Ensina]">Fazer Lance via WhatsApp</a>
+    </div>
+    <div>
+      <img src="imagens/caminhos-de-giz.jpg" alt="Caminhos de Giz">
+      <a href="https://wa.me/244943589007?text=Tenho%20interesse%20na%20obra%20[Caminhos de Giz]">Fazer Lance via WhatsApp</a>
+    </div>
+  </div>
 
-<script>
-  function abrirModal(src) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("imagemModal").src = src;
-  }
+  <div class="whatsapp">
+    <a href="https://wa.me/244943589007?text=Olá%2C+tenho+interesse+em+fazer+um+lance+na+obra+da+Galeria+IPAVC">Fazer um lance via WhatsApp</a>
+  </div>
 
-  function fecharModal() {
-    document.getElementById("modal").style.display = "none";
-  }
-</script>
+  <footer>
+    Leilão Solidário - Conferência Internacional de Pedagogia | 12 a 14 de Maio <br>
+    Objeto do Leilão: Obras originais com assinatura IPAVC 2025 | Compradores têm direito a certificado digital e menção pública <br><br>
+    Instituto Politécnico de Artes Valter Cambodja
+  </footer>
+
+  <audio autoplay loop>
+    <source src="imagens/fundo-suave.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio embutido.
+  </audio>
 
 </body>
 </html>
